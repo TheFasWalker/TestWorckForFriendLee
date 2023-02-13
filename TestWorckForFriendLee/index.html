@@ -4,14 +4,69 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
 	<title>landing page for Friend Lee</title>
 	<link rel="stylesheet" href="../public/css/style.css">
+
 </head>
 <body>
 	<div class="wrapper">
-		тут будет калькулятор
+	<section class="calculator container">
+		<h1 class="calculator__title">
+			Расчитайте стоимость автомобиля в лизинг
+		</h1>
+		<div class="calculator__inputs">
+			<div class="calculator__section calculator__section_rub">
+				<div class="calculator__subtitle">
+					<span>Стоимость автомобиля</span>
+				</div>
+				<input class="calculator__input calculator__input_cost" type="number" value="3300000">
+			</div>
+			<div class="calculator__section calculator__section_percent">
+				<div class="calculator__subtitle">
+					<span>Первоначальный взнос</span>
+				</div>
+				<input class="calculator__input calculator__input_cost" type="number" value="420000">
+				<div class="calculator__percent">
+					<span>13%</span>
+				</div>
+			</div>
+			<div class="calculator__section calculator__section_month">
+				<div class="calculator__subtitle">
+					<span>Срок лизинга</span>
+				</div>
+				<input class="calculator__input calculator__input_cost" type="number" value="60">
+			</div>
+		</div>
+		<div class="calculator__information information">
+			<div class="calculator__section">
+				<div class="information__title">
+					<span>Сумма договора лизинга</span>
+				</div>
+				<div class="information__subtitle">
+					<span>4 467 313 ₽</span>
+				</div>
+			</div>
+			<div class="calculator__section">
+				<div class="information__title">
+					<span>Ужемесячный платеж</span>
+				</div>
+				<div class="information__subtitle">
+					<span>114 455 ₽</span>
+				</div>
+			</div>
+			<div class="calculator__section">
+				<button class="calculator__button">Оставить заявку</button>
+			</div>
+		</div>
+
+
+
+	</section>
 	</div>
+	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="public/scripts/script.js"></script>
 </body>
 </html>
