@@ -12,32 +12,34 @@
 </head>
 <body>
 	<div class="wrapper">
-	<section class="calculator container">
+	<form action="#" class="calculator container">
 		<h1 class="calculator__title">
 			Расчитайте стоимость автомобиля в лизинг
 		</h1>
 		<div class="calculator__inputs">
 			<div class="calculator__section calculator__section_rub">
 				<div class="calculator__subtitle">
-					<span class="calculator__subtitle_dextop">Стоимость автомобиля</span>
-					<span class="calculator__subtitle_mobile">Желаемая сумма кредита</span>
+					<span>Стоимость автомобиля</span>
 				</div>
-				<input class="calculator__input calculator__input_cost" type="number" value="3300000">
+				<input class="calculator__input calculator__input_cost js-calculator__input_cost" id="js-cost-rub" type="text">
+				<div id="js-slider-cost-min" class="calculator__slider"></div>
 			</div>
 			<div class="calculator__section calculator__section_percent">
 				<div class="calculator__subtitle">
 					<span>Первоначальный взнос</span>
 				</div>
-				<input class="calculator__input calculator__input_cost" type="number" value="420000">
+				<input class="calculator__input calculator__input_cost" id="js-calculator-lising" type="text" >
 				<div class="calculator__percent">
 					<span>13%</span>
 				</div>
+				<div id="js-slider-deposit" class="calculator__slider"></div>
 			</div>
 			<div class="calculator__section calculator__section_month">
 				<div class="calculator__subtitle">
 					<span>Срок лизинга</span>
 				</div>
-				<input class="calculator__input calculator__input_cost" type="number" value="60">
+				<input class="calculator__input calculator__input_cost" id="js-calculator-month" type="text" >
+				<div id="js-slider-month" class="calculator__slider"></div>
 			</div>
 		</div>
 		<div class="calculator__information information">
@@ -58,13 +60,14 @@
 				</div>
 			</div>
 			<div class="calculator__section">
-				<button class="calculator__button">Оставить заявку</button>
+				<button class="calculator__button" type="button">Оставить заявку</button>
 			</div>
 		</div>
 
 
 
-	</section>
+
+	</form>
 	</div>
 	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

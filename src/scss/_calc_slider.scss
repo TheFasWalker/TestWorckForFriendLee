@@ -1,0 +1,39 @@
+.calculator__slider{
+  height: 2px;
+  width: 87%;
+  position: relative;
+  bottom: 0px;
+  left: 24px;
+  background: #e1e1e1;
+  .ui-slider-handle{
+    border-radius: 50%;
+    top: -8px;
+    width: 16px;
+    height: 16px;
+    background: #FF9514;
+  }
+  .ui-slider-handle:focus{
+    border:none;
+  }
+
+
+
+
+  .ui-widget-header{
+    background: #FF9514;
+    border: 1px solid #FF9514;
+  }
+}
+.ui-widget.ui-widget-content{
+  border: none !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+  border: none;
+}
+@media(max-width: 767px){
+  .calculator__slider {
+    width: 87%;
+    left: 20px;
+
+  }
+}
