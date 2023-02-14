@@ -1,15 +1,17 @@
 
 
 $(document).ready(function () {
+
     function getPay(){
         let oldValue = $('.js-calculator__input_payment').val()
         let newValue = oldValue.substring(0, oldValue.length - 2)
         return newValue
     }
+
     $( function() {
         $( "#js-slider-cost-min" ).slider({
             range: "min",
-            value: 1500000,
+            value: 3300000,
             min: 1500000,
             max: 10000000,
             slide: function( event, ui ) {
@@ -33,8 +35,8 @@ $(document).ready(function () {
     $( function() {
         $( "#js-slider-month" ).slider({
             range: "min",
-            value: 6,
-            min: 1,
+            value: 60,
+            min: 6,
             max: 120,
             slide: function( event, ui ) {
                 $( "#js-calculator-month" ).val(ui.value );
@@ -45,9 +47,14 @@ $(document).ready(function () {
 
     $('.calculator__input_cost').keyup(function (){
         $("#js-slider-cost-min" ).slider( "value", $('.calculator__input_cost').val())
+        maxMin($('.calculator__input_cost'), $( "#js-slider-cost-min" ))
+
     })
 
     $('.calculator__input_month').keyup(function (){
+        $('#js-slider-month').slider("value", $('.calculator__input_month').val())
+    })
+    $('.calculator__input_month').blur(()=>{
         $('#js-slider-month').slider("value", $('.calculator__input_month').val())
     })
 
@@ -58,6 +65,10 @@ $(document).ready(function () {
     })
     $('.js-calculator__input_payment').blur(()=>{
         $( "#js-calculator-lising" ).val( $( "#js-slider-deposit" ).slider( "value" ) + " ₽");
-
     })
+
+    $('.js-calculator__input_payment').keyup(function (){
+        $( "#js-slider-deposit" ).slider("value", $('.js-calculator__input_payment').val())
+    })
+
 });
